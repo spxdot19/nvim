@@ -1,8 +1,6 @@
 local g = vim.g
 local o = vim.opt
 
-
-
 o.clipboard = "unnamedplus"
 o.swapfile = false
 
