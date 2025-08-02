@@ -12,18 +12,18 @@ vim.api.nvim_create_autocmd("FileType", {
     command = "wincmd L",
 })
 
-vim.api.nvim_create_autocmd("LspAttach", {
-    group = spx,
-    callback = function(args)
-        vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = args.buf,
-            callback = function()
-                vim.lsp.buf.format { async = false, id = args.data.client_id }
-            end,
-        })
-    end
-})
-
+-- vim.api.nvim_create_autocmd("LspAttach", {
+--     group = spx,
+--     callback = function(args)
+--         vim.api.nvim_create_autocmd("BufWritePre", {
+--             buffer = args.buf,
+--             callback = function()
+--                 vim.lsp.buf.format { async = false, id = args.data.client_id }
+--             end,
+--         })
+--     end
+-- })
+--
 
 vim.diagnostic.config(
     {
